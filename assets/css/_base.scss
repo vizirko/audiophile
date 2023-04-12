@@ -1,0 +1,92 @@
+// * {
+//     outline: 1px dashed #252b4240;
+// }
+
+
+// ============ RESET ============
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+
+input, button, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img, svg {
+    vertical-align: top;
+}
+
+
+// ============ BASE STYLES ============
+html {
+    min-height: 100%;
+ }
+ 
+ body {
+    min-height: 100%;
+ }
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: rem(15);
+    font-weight: 700;
+    min-height: 100%;
+}
+
+
+[class*="__container"] {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+main {
+    flex: 1 1 auto;
+}
+
+
