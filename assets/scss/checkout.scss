@@ -1,0 +1,219 @@
+@import 'header-product';
+@import 'cart';
+
+body {
+    background: #F2F2F2;
+    display: block;
+}
+
+.page {
+
+    &__checkout-summary {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 32px;
+        justify-content: space-between;
+        padding: 38px 0 141px;
+    }
+
+    @media (max-width: 1130px) {
+
+        .cart {
+            flex: 100%;
+            max-width: none;
+            width: auto;
+        }
+
+        .cart__cart-container {
+            width: auto;
+        }
+
+        .checkout {
+            flex: 100%;
+        }
+
+        .checkout__body {
+            max-width: none;
+        }
+
+        .form__input-block {
+            flex: 0 1 280px;
+        }
+
+        .form__input-block-payment {
+            flex-basis: 280px;
+        }
+    }
+}
+.checkout {
+
+    &__body {
+        max-width: 730px;
+        padding: 54px 48px 48px;
+        background-color: $white;
+        border-radius: 8px;
+    }
+
+    &__title {
+        font-size: rem(32);
+        line-height: 1.12;
+        letter-spacing: rem(1.14);
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 41px;
+    }
+}
+
+.form {
+
+    [class*="form__legend"] {
+        font-size: rem(12);
+        line-height: 1.92;
+        letter-spacing: rem(0.92);
+        text-transform: uppercase;
+        color: $orange;
+        margin-bottom: 16px;
+    }
+
+    [class*="form__fieldset"]:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    &__fieldset-shipping {
+        .form__input-block:first-child {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__fieldset-payment {
+        
+        .form__input-block-payment .form__label {
+            display: inline;
+            margin-bottom: 0;
+        }
+
+        .form__legend-payment + .form__inputs-row {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__inputs-row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 24px;
+    }
+
+    &__input-block {
+        flex: 0 1 309px;
+    }
+
+    &__input-block-payment {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        flex-basis: 309px;
+    }
+
+    &__input-block-radio {
+        display: flex;
+        column-gap: 21px;
+        align-items: center;
+        padding: 21px 23px;
+        border: 1px solid #CFCFCF;
+        border-radius: 8px;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 9px;
+    }
+
+    &__input {
+        background: $white;
+        border: 1px solid #CFCFCF;
+        border-radius: 8px;
+        width: 100%;
+        height: 56px;
+        font-size: rem(14);
+        line-height: 1.35;
+        letter-spacing: -0.25px;
+        color: $black;
+        padding: 18px 24px;
+    }
+
+    &__input::placeholder {
+        opacity: 0.4;
+    }
+
+    &__input-radio {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #CFCFCF;
+        border-radius: 50%;
+    }
+}
+
+.cart {
+    margin: 0;
+    max-width: 350px;
+
+    &__cart-container {
+        width: 350px;
+    }
+
+    .cart-item__countbox {
+        display: block;
+        flex: 0 0 26px;
+        width: 26px;
+        background-color: inherit;
+    }
+
+    .cart-item__number {
+        font-size: rem(15);
+        line-height: 1.67;
+        color: $black;
+        opacity: 0.5;
+    }
+
+    .cart-item__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cart-item__item-space, .cart-item__info {
+        flex: auto;
+    }
+
+    &__total-block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    &__total-title {
+        font-weight: 500;
+        font-size: rem(15);
+        line-height: 1.67;
+        color: $black;
+        opacity: 0.5;
+        text-transform: uppercase;
+    }
+
+    &__total {
+        margin-bottom: 0;
+    }
+
+    &__total-block + &__total {
+        margin-bottom: 24px;
+    }
+
+    &__total-block + &__total &__total-price {
+        font-size: rem(18);
+        line-height: 1.38;
+        color: $orange
+    }
+}
+

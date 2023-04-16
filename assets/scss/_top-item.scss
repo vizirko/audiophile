@@ -1,0 +1,80 @@
+.top-item {
+    margin-bottom: 48px;
+
+    &__body {
+        border-radius: 8px;
+        background-color: $orange;
+        background-image: url('../images/page/top-item/zx9-speaker.svg'), url('../images/page/top-item/rings.png');
+        background-position: 110px bottom, bottom left;
+        background-repeat: no-repeat;
+        padding: 11.40% 8.55% 11.20% 0;
+    }
+
+    &__block {
+        min-height: 310px;
+        max-width: 350px;
+        margin-left: auto;
+    }
+
+    &__title {
+        @extend %main-product-title;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        @extend %main-product-text;
+        @extend %line-clamp;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        @extend %button-see-product;
+        background-color: $black;
+        
+        &:hover {
+            background-color: #4C4C4C;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        margin-bottom: 32px;
+
+        &__body {
+            padding: 353px 0 64px;
+            background-image: url(../images/page/top-item/zx9-speaker-medium.svg), url(../images/page/top-item/rings-medium.png);
+            background-position: center 52px, center top;
+        }
+
+        &__block {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 600px) {
+        margin-bottom: 24px;
+
+        &__body {
+            padding: 294px 0 55px;
+            background-image: url(../images/page/top-item/zx9-speaker-small.svg), url(../images/page/top-item/rings-small.png);
+            background-position: center 52px, center top;
+        }
+
+        &__block {
+            min-height: 250px;
+        }
+
+        &__title {
+            font-size: rem(36);
+            line-height: 1.1;
+            letter-spacing: rem(1.28);
+            max-width: 170px;
+            margin: 0 auto 24px;
+        }
+
+        &__text {
+            margin: 0 auto 24px;
+            max-width: 280px;
+        }
+    } 
+}

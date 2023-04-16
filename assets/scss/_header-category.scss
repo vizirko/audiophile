@@ -1,0 +1,16 @@
+.header {
+    border-radius: 0;
+
+    &__catogory {
+        padding: 195px 0 97px;
+    }
+
+    &__title {
+        font-size: rem(40);
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: rem(1.42);
+        text-transform: uppercase;
+        color: $white;
+    }
+}

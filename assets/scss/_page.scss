@@ -1,0 +1,21 @@
+.page {
+
+    &__top-item, &__promo-item-one {
+        margin-bottom: 48px;
+    }
+
+    &__promo-page-wrapper > *:not(.page__nav-backlink){
+        padding: 80px 0;
+    }
+
+    &__promo-item:first-child {
+        padding-top: 160px;
+    }
+
+    @media (max-width: 800px) {
+
+        &__promo-page-wrapper > *:not(.page__nav-backlink){
+            padding: 60px 0;
+        }
+    }
+}

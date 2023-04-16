@@ -1,0 +1,12 @@
+.page {
+    .page-nav:last-child {
+        padding: 160px 0 0;
+    }
+
+    @media (max-width: 800px) {
+
+        .page-nav:last-child {
+            padding: 110px 0 0;
+        }
+    }
+}

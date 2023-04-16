@@ -1,0 +1,32 @@
+.page {
+    
+    &__nav-backlink {
+        padding-top: 80px;
+    }
+
+    &__page-backlink {
+        @extend %main-product-text;
+        color: $black;
+        opacity: 0.5;
+        display: inline-block;
+
+        &:hover {
+            color: $orange;
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 800px) {
+
+        &__nav-backlink {
+            padding-top: 33px;
+        }
+    }
+
+    @media (max-width: 680px) {
+
+        &__nav-backlink {
+            padding-top: 16px;
+        }
+    }
+}
